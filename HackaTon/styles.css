@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(231, 244, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 13%;
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(40, 40, 40);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    text-shadow: 0 0 10px rgba(40, 40, 40);
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: rgb(26, 188, 156);
+}
+
+.content {
+    margin-left: 15%;
+    padding: 1%;
+    flex-grow: 1;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.content h1 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-left: 25px;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.base {
+    margin-left: 15%;
+    padding: 1%;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    flex: 1; /* <-- Это ключ! */
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.material-item {
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.material-item a {
+    text-decoration: none;
+    color: rgb(0, 51, 153);
+    font-weight: bold;
+}
+
+/* Только для login.php и register.php */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form label {
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.auth-form button {
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(0, 51, 204);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-form button:hover {
+    background-color: rgb(0, 51, 204);
+}
+
+.auth-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: rgb(0, 51, 204);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.auth-message {
+    color: rgb(255, 0, 0);
+    margin-bottom: 15px;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.material-item {
+    background-color: rgb(249, 249, 249);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.material-item img {
+    max-width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.material-name {
+    display: block;
+    font-weight: bold;
+    color: rgb(0, 51, 204);
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.material-name:hover {
+    text-decoration: underline;
+}
+
+/* Стили только для index.php */
+.index-page .base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* чтобы на маленьком экране не ломалось */
+}
+
+.index-page .base h2,
+.index-page .base p {
+    flex: 1 1 50%;
+    margin: 10px 0;
+}
+
+.index-page .base img {
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    flex: 1 1 40%;
+    display: block;
+    margin: 0;
+}
